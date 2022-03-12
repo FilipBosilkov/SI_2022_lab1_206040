@@ -1,5 +1,5 @@
-Milk
-Apples
-Peaches
-Fish
-Bread
+Milk x1
+Apples x8
+Peaches x6
+Fish x2
+Bread x1
