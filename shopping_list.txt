@@ -1,5 +1,6 @@
 Milk x1
 Apples x6
 Peaches x6
-Fish x2
-Bread x5
+Cream x2
+Bread x1
+Oranges x3
