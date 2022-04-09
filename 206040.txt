@@ -1,0 +1,83 @@
+Објаснување:
+прво го клонирав репозиториумот со користење на InteliJ version control system addon
+Потоа правиме датотека shopping_list.txt, користиме git add shopping_list.txt и commit -m "Add 5 items to the shopping list"
+После менување на количината, и после git add shopping_list.txt направив git commit -m "Add quantities to the items"
+Потоа, со користење на git -branch branch 1 и git -branch 2 ги креирав гранките.
+Извршив сихронизација на сите гранки со git push. 
+git checkout branch1 
+git add shopping_list.txt Се префрлуваме на branch1 и додаваме нов commit
+git commit -m "Change quantity of item #5"
+git checkout master 
+git add shopping_list.txt Се враќаме на главната гранка и правиме commit.
+git commit -m "Change quantity of item #2" 
+git checkout branch2 Се префрлуваме на втората гранк, правиме промена и додаваме
+git add shopping_list.txt
+git commit -m "Modify item #4"
+git add shopping_list.txt
+git commit --ammend -m "Modify item #4 and add item #6" Ги спојуваме разликите со последниот commit
+git checkout master    
+git merge branch1      Се враќаме на главната гранка, и ги спојуваме двете гранки, при што се појавува конфликт
+git merge branch2 
+
+
+Во чекорите 20 и 21, се случија конфилкти. Јас го решив конфилктот со избор
+на втората опција. Спојувањето беше извршено со recursive стратегија.
+
+
+
+Документација:
+commit 6209f5bfd6de23f2c2a999a9dc1bc97eb4b6eb52 (HEAD -> master, origin/master, origin/HEAD)
+Merge: 323f926 3fe02ea
+Author: Filip Bosilkov <fiip_b01@outlook.com>
+Date:   Tue Mar 15 19:09:20 2022 +0100
+
+    fixed merge
+
+commit 323f926fd2eac7bbca0e69d83dd65b57f5d806f8
+Merge: d967301 37fd6b8
+Author: Filip Bosilkov <fiip_b01@outlook.com>
+Date:   Sun Mar 13 19:51:56 2022 +0100
+
+    Merge branch 'branch1'
+
+commit 3fe02ea5c07776c07a59214ec88041d3335e614c
+Author: Filip Bosilkov <fiip_b01@outlook.com>
+Date:   Sun Mar 13 19:39:17 2022 +0100
+
+    Modify item #4 and add item #6
+
+commit d967301b44d8d9e37904f78d4e437e6ab4176df5
+Author: Filip Bosilkov <fiip_b01@outlook.com>
+Date:   Sun Mar 13 19:38:12 2022 +0100
+
+    Change quantity of item 2
+
+commit 37fd6b830f409d1d42e500e77a9e142086b3e9d6
+Author: Filip Bosilkov <fiip_b01@outlook.com>
+Date:   Sun Mar 13 19:37:53 2022 +0100
+
+    Change quantity of item 5
+
+commit d3856281a4b5afd4d0557aaa0f2a1d9d571f5180
+Author: Filip Bosilkov <fiip_b01@outlook.com>
+Date:   Sat Mar 12 23:31:31 2022 +0100
+
+    Add quantity to the items
+
+commit baf415e2dddfe64fdb88dc5a568bbc85767e5dde
+Author: Filip Bosilkov <fiip_b01@outlook.com>
+Date:   Sat Mar 12 23:24:43 2022 +0100
+
+    Add 5 items to the shopping list
+
+commit 4a33dc288edb943d4f49589b9196640870cd5b21
+Author: Filip Bosilkov <100288868+FilipBosilkov@users.noreply.github.com>
+Date:   Sat Mar 12 22:44:56 2022 +0100
+
+    Update README.md
+
+commit 6c9304450df2e808dd12be5cf647365c6511ab9e
+Author: Filip Bosilkov <100288868+FilipBosilkov@users.noreply.github.com>
+Date:   Sat Mar 12 22:44:28 2022 +0100
+
+    Initial commit
